@@ -1,6 +1,6 @@
 
 // import ejwtstore from  '~/modules/__ejwt/store.js'
-import ejwtstore from  '@nuxtjs/ejwt/store.js'
+import ejwtstore from  'ejwt-nuxt/store.js'
 
 export default  (ctx,inject) => {
   //important :get options from addplugin

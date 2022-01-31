@@ -4,7 +4,7 @@ wrapper for [Express JWT Enhanced](https://www.npmjs.com/package/express-jwt-enh
 easy json web token on nuxt
 
 ### insall
-`  npm install @nuxtjs/ejwt `
+`  npm install ejwt-nuxt `
 
 ### usage
 in nuxt.config :
@@ -13,9 +13,9 @@ in nuxt.config :
         .
         .
 
-        ['@nuxtjs/ejwt',{
+        ['ejwt-nuxt',{
 
-            apiPath:'/auth',          //@nuxtjs/ejwt module api's path that end user see
+            apiPath:'/auth',          //ejwt-nuxt module api's path that end user see
 
             loginUrl:'/your/api/login',    //server callback for login
             redirect:{
@@ -99,7 +99,7 @@ for example  `/your/api/login` that has shown in above as `loginUrl` can be like
 
 * **fetch()**  :  fetch payload on refresh page:
 
-    *for ssr app  ,   in sore/index.js :*
+    *for ssr app  ,   in store/index.js :*
 
         export const actions = {
             .

@@ -4,7 +4,7 @@ export default  function(opts={}){
 
     this.addServerMiddleware({ path: opts.apiPath , 
                             //    handler: '~/modules/ejwt/api.js' 
-                               handler: '@nuxtjs/ejwt/api.js' 
+                               handler: 'ejwt-nuxt/api.js' 
                             })
 
     this.options.publicRuntimeConfig.ejwt = this.options.publicRuntimeConfig.ejwt || {}
@@ -20,3 +20,5 @@ export default  function(opts={}){
 
 
 module.exports.meta = require('./package.json')
+
+

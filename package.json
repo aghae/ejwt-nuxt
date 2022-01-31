@@ -1,7 +1,7 @@
 {
-  "name": "@nuxtjs/ejwt",
+  "name": "ejwt-nuxt",
   "version": "1.0.0",
-  "description": "JWT Nuxt module . wrapper for Express JWT Enhanced",
+  "description": "JWT Nuxt module . Wrapper for Express JWT Enhanced",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,11 @@
     "express": "^4.17.2",
     "express-jwt-enhanced": "^1.2.1"
   },
+ "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aghae/nuxt-ejwt.git"
-  },
+    "url": "git+https://github.com/aghae/ejwt-nuxt.git"
+  }
 }
