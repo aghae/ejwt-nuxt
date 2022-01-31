@@ -130,7 +130,7 @@ for example  `/your/api/login` that has shown in above as `loginUrl` can be like
         //in methods:
         this.$refs.captcha.innerHTML = await this.$ejwt.captcha_gen('math','captcha_name')
 
-* **captcha_check(text,name='captcha')**  
+* **captcha_check(text,name='captcha')** 
 
         await this.$ejwt.captcha_chk(this.captcha_txt,'captcha_name')
 

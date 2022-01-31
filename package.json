@@ -1,5 +1,5 @@
 {
-  "name": "ejwt-nuxt", 
+  "name": "ejwt-nuxt",
   "version": "1.0.2",
   "description": "JWT Nuxt module . Wrapper for Express JWT Enhanced",
   "main": "index.js",
