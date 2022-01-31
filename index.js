@@ -1,4 +1,4 @@
-export default  function(opts={}){
+export default  function(opts={}){ 
   
     process.env.ejwt =  JSON.stringify(opts)  //for api
 

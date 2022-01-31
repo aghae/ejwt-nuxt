@@ -1,6 +1,6 @@
 
  export default{
-   namespaced: true,  //very important
+   namespaced: true,  //very important 
    state  :{
       session:{},
       

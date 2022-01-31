@@ -111,7 +111,7 @@ for example  `/your/api/login` that has shown in above as `loginUrl` can be like
         }
 
     
-    *for spa app in nuxt page :*  
+    *for spa app in nuxt page :*
 
         export default {
             .
