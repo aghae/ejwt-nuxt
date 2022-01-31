@@ -1,5 +1,4 @@
 
-// import ejwtstore from  '~/modules/__ejwt/store.js'
 import ejwtstore from  'ejwt-nuxt/store.js'
 
 export default  (ctx,inject) => {
@@ -10,8 +9,8 @@ export default  (ctx,inject) => {
    
    inject('ejwt',{
       loggined : ()   => ctx.store.state.ejwt.session['loggined'],
-      login:(data,redirect=opts.redirect.login) => {
-         return ctx.store.dispatch('ejwt/login',{data}).then(ret=>{
+      login:(user,pass,redirect=opts.redirect.login) => {
+         return ctx.store.dispatch('ejwt/login',{user,pass}).then(ret=>{
             if(ret.succ && redirect){
                ctx.redirect(redirect)
             }
@@ -27,9 +26,9 @@ export default  (ctx,inject) => {
       },
       fetch:()        => ctx.store.dispatch('ejwt/get'),
       get: (key='')   => key?ctx.store.state.ejwt.session[key]:ctx.store.state.ejwt.session,
-      set:      data  => ctx.store.dispatch('ejwt/set',data),      
-      setkey:   data  => ctx.store.dispatch('ejwt/setkey',data),  // data={ key,val,expire}
-      unsetkey: data  => ctx.store.dispatch('ejwt/unsetkey',data),  
+      set:  payload  => ctx.store.dispatch('ejwt/set',payload),      
+      setkey:(key,val,expire) => ctx.store.dispatch('ejwt/setkey',{key,val,expire}),  // data={ key,val,expire}
+      unsetkey: (key)  => ctx.store.dispatch('ejwt/unsetkey',{key}),  
       captcha_gen: async(type='math',name='captcha') =>  {  //type=math or text
             return await ctx.$axios.post(ctx.$config.ejwt.apiPath+`/captcha`,{type,name})
                .then( res=>{ 

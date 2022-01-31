@@ -19,7 +19,8 @@
    //actions called with this.$store.dispatch
    actions : {
 
-      login({commit},{data}){
+      login({commit},data){
+        
          return this.$axios.post(this.$config.ejwt.loginUrl,data)
                   .then( res=>{
                      if(res.data.err){
@@ -72,7 +73,7 @@
       },
 
       unsetkey({commit,state},payload){  //payload ={name:}
-         return this.$axios.post(this.$config.ejwt.apiPath+'/captcha_gen',payload)
+         return this.$axios.post(this.$config.ejwt.apiPath+'/unsetkey',payload)
                .then( res=>{
                   commit('setState',{name:'session',val:res.data})
                })

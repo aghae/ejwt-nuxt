@@ -53,7 +53,8 @@ app.post("/set",async(req,res)=>{
 
 app.post("/setkey",async (req,res)=>{
     try{
-        var ret = await ejwt.setkey(req.body.key,req.body.val,req.body.expire || null)
+        data= req.body
+        var ret = await ejwt.setkey(data.key,data.val,data.expire || null)
         res.json(ret)
     }catch(err){
         console.log(err)
@@ -61,7 +62,7 @@ app.post("/setkey",async (req,res)=>{
 })
 
 app.post("/unsetkey",async(req,res)=>{
-    data = await ejwt.unsetkey(req.body.name)
+    data = await ejwt.unsetkey(req.body.key)
     res.json(data)
 })
 

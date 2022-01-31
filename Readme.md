@@ -23,7 +23,7 @@ in nuxt.config :
                 logout : 'after/success/logout'   //if not be set redirect to current route
             },
 
-            //enhanced express jwt default opttions :
+            //enhanced express jwt default options :
             // you can set none or some these
              sec_cookie:true,
              expire: 3600,           // alive for seconds
@@ -64,13 +64,13 @@ for example  `/your/api/login` that has shown in above as `loginUrl` can be like
 
 * **loggined()** : check loggined or not ; return true or false
 
-* **login({user,pass},redirect='')** :call login callback 
+* **login(user,pass,redirect='')** :call login callback 
         
         <button @click="$ejwt.login({user,pass})">login</button>
 
         <button @click="$ejwt.login({user,pass},'path/to/redirect/url')">login</button>
 
-* **logout({user,pass},redirect)**
+* **logout(redirect='')**
 
         <button @click="$ejwt.logout()">logout</button>
 
@@ -80,13 +80,13 @@ for example  `/your/api/login` that has shown in above as `loginUrl` can be like
 
         <button @click="$ejwt.set({profile:{name:'aghae'}})">set</button>
     
-* **setkey({key,val,expire=''})** : expire in seconds
+* **setkey(key,val,expire=0)** : expire in seconds.default is 0 means unlimited
 
-        <button @click="$ejwt.setkey({key:'profile.favs',val:['watch Movie','Read Book'],expire:5})">setkey</button>
+        <button @click="$ejwt.setkey('profile.favs',['watch Movie','Read Book'],5)">setkey</button>
 
 * **unsetkey(key)**
         
-        <button @click="$ejwt.unsetkey({name:'profile.favs'})">unsetkey</button>
+        <button @click="$ejwt.unsetkey('profile.favs')">unsetkey</button>
         
    
 * **get(key='')**  : if key not be set. it will return all payload 

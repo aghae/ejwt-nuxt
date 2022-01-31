@@ -1,6 +1,6 @@
 {
   "name": "ejwt-nuxt",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "JWT Nuxt module . Wrapper for Express JWT Enhanced",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.2",
     "express-jwt-enhanced": "^1.2.1"
   },
- "publishConfig": {
+  "publishConfig": {
     "access": "public"
   },
   "repository": {

@@ -3,7 +3,6 @@ export default  function(opts={}){
     process.env.ejwt =  JSON.stringify(opts)  //for api
 
     this.addServerMiddleware({ path: opts.apiPath , 
-                            //    handler: '~/modules/ejwt/api.js' 
                                handler: 'ejwt-nuxt/api.js' 
                             })
 
